@@ -25,6 +25,7 @@ import (
 
 func Router() {
 	app := iris.New()
+	//app.Logger().SetLevel("debug")
 	app.Logger().SetLevel("warn")
 	app.Use(recover.New())
 	app.Use(logger.New())
